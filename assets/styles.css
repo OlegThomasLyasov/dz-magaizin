@@ -1,51 +1,4 @@
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Hairline.ttf);
-    font-style: normal;
-    font-weight: 100;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Light.ttf);
-    font-style: normal;
-    font-weight: 300;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Regular.ttf);
-    font-style: normal;
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Medium.ttf);
-    font-style: normal;
-    font-weight: 500;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Semibold.ttf);
-    font-style: normal;
-    font-weight: 600;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Bold.ttf);
-    font-style: normal;
-    font-weight: 700;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Heavy.ttf);
-    font-style: normal;
-    font-weight: 800;
-}
-@font-face {
-    font-family: 'Lato';
-    src: url(./fonts/Lato-Black.ttf);
-    font-style: normal;
-    font-weight: 900;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 * {
     margin: 0;
@@ -75,6 +28,8 @@ html {
     align-items: center;
     justify-content: space-between;
     height: 75px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 .header__logo {
     display: flex;
@@ -266,4 +221,72 @@ html {
 .feature__button:hover {
     background-color: #F16D7F;
     color: #FFF;
+}
+
+@media screen and (max-width: 1439px) {
+    .center {
+        max-width: 100%;
+        margin: 0 16px;
+    }
+    .header_container {
+        max-width: 100%;
+        margin: 0 32px;
+    }
+    .intro_container {
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 39px;
+        justify-content: center;
+    }
+    .intro-content__title {
+        font-size: 44px;
+    }
+    .intro-content__sub-title {
+        font-size: 24px;
+    }
+    .offer {
+        margin-top: 65px;
+    }
+    .feature {
+        margin-top: 110px;
+    }
+    .feature-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .intro_container {
+        gap: 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header_container {
+      margin: 0 16px;
+    }
+    .hide-mobile {
+        display: none;
+    }
+    .intro {
+        height: 363px;
+        display: flex;
+        align-items: center;
+    }
+    .intro-content__title {
+        font-size: 38px;
+    }
+    .intro-content__sub-title {
+        font-size: 20px;
+    }
+    .offer {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .card-big {
+        grid-column: auto;
+        height: 111px;
+    }
+    .feature-items {
+        grid-template-columns: 1fr;
+    }
 }
