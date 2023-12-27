@@ -386,6 +386,23 @@ html {
     }
 
 }
+.header_icon_list__drop-down-menu {
+    position: fixed;
+    top: 75px;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+.burger:hover + .header_icon_list__drop-down-menu {
+    visibility: visible;
+    animation: ani 1.5s forwards;
+}
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
 @media screen and (max-width: 1439px) {
     .center {
         max-width: 100%;
